@@ -1,0 +1,52 @@
+GET http://127.0.0.1:8000/products/ HTTP/1.1
+
+###
+
+GET http://127.0.0.1:8000/products/2/ HTTP/1.1
+
+###
+
+DELETE http://127.0.0.1:8000/products/2/ HTTP/1.1
+
+###
+
+PUT http://127.0.0.1:8000/products/2/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2NDIxNDIyLCJpYXQiOjE3NDY0MjExMjIsImp0aSI6IjMyZTFmMjcwZTIzOTQ0ZDI4OWE4ZWIwYTU4ZDk2Mzk4IiwidXNlcl9pZCI6MX0.sDqBmg89_XSZhtzbCNOTDMWAYAyDjdVYRSI3GG13WKU
+
+{
+    "name": "cigrette 2",
+    "price": "40.00",
+    "stock": "20"
+}
+
+###
+
+POST http://127.0.0.1:8000/products/ HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzQ2NDIxNDIyLCJpYXQiOjE3NDY0MjExMjIsImp0aSI6IjMyZTFmMjcwZTIzOTQ0ZDI4OWE4ZWIwYTU4ZDk2Mzk4IiwidXNlcl9pZCI6MX0.sDqBmg89_XSZhtzbCNOTDMWAYAyDjdVYRSI3GG13WKU
+
+{
+    "name": "cigrette",
+    "price": "30.00",
+    "stock": "12"
+}
+
+###
+
+POST  http://127.0.0.1:8000/api/token/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "username": "admin",
+    "password": "test"
+}
+
+###
+
+POST  http://127.0.0.1:8000/api/token/refresh/ HTTP/1.1
+Content-Type: application/json
+
+{
+    "refresh" : "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTc0NjUwNzUyMiwiaWF0IjoxNzQ2NDIxMTIyLCJqdGkiOiIxY2RjYzJiZWE0MDE0NmFmODUyZGQ5Y2FiNjhjNDY5NyIsInVzZXJfaWQiOjF9.I5bzYR71pGygvdP6E7vVNgDKUxeB02D_-HvLNnGCAII"
+}
